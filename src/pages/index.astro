@@ -1,0 +1,320 @@
+---
+import '../styles/global.css';
+
+const projects = [
+  {
+    name: 'RAG-Based AI Assistant',
+    desc: 'Retrieval-augmented generation assistant using LLMs, LangChain, and the OpenAI API to answer questions from uploaded documents — document chunking, embeddings, and semantic search.',
+    tags: ['Python', 'LangChain', 'OpenAI API', 'RAG'],
+  },
+  {
+    name: 'Second-Brain Semantic Search System',
+    desc: 'Full-stack LLM-powered wiki that turns personal notes into searchable knowledge maps — ingestion pipeline, vector search, RAG, UI, and cloud deployment.',
+    tags: ['LLM', 'Vector Search', 'RAG', 'Full-Stack'],
+    repo: 'PersonalNotesRAGSystem',
+  },
+  {
+    name: 'Efficient Fine-Tuning of CodeBERT Models',
+    desc: 'Fine-tuned CodeBERT with parameter-efficient methods (LoRA, Adapters, BitFit) for code clone and defect detection on CodeXGLUE benchmarks.',
+    tags: ['PyTorch', 'LoRA', 'CodeBERT', 'NLP'],
+    repo: 'CodeTuneEfficiency',
+  },
+  {
+    name: 'Stock Price Prediction — "The Fortune Teller"',
+    desc: 'LSTM model combining FinBERT news sentiment with historical stock data to predict 30-day price trends.',
+    tags: ['Python', 'TensorFlow', 'LSTM', 'FinBERT'],
+  },
+  {
+    name: 'Cross-Scriptural Text Feature Extraction',
+    desc: 'CNN built with PyTorch plus Gemini Pro to compare features across ancient scripts, reaching 90% accuracy.',
+    tags: ['PyTorch', 'CNN', 'Gemini Pro'],
+    repo: 'FeatureExtraction_from_AncientScript',
+  },
+  {
+    name: 'Study-Mate',
+    desc: 'Full-stack web app that matches students by academic interests.',
+    tags: ['C#', '.NET', 'SQL', 'JavaScript'],
+    repo: 'StudyMate',
+  },
+  {
+    name: 'F1 Race Predictor',
+    desc: 'Machine learning model predicting 2022 Formula 1 race outcomes from scraped historical race data.',
+    tags: ['Python', 'scikit-learn', 'ML'],
+    repo: 'Formula1-RacePredictor',
+  },
+  {
+    name: 'Boggle',
+    desc: 'Multiplayer Boggle web app with real-time gameplay.',
+    tags: ['C#', '.NET', 'JavaScript'],
+    repo: 'Boggle',
+  },
+  {
+    name: 'TBF Financial Management System',
+    desc: 'Java portfolio management system backed by MySQL via JDBC.',
+    tags: ['Java', 'MySQL', 'JDBC'],
+    repo: 'FinancialManagementSystem',
+  },
+];
+
+const jobs = [
+  {
+    title: 'Software Engineer',
+    org: 'University of Nebraska-Lincoln',
+    dates: 'Nov 2023 – Present',
+    loc: 'Lincoln, NE',
+    points: [
+      'Led a 4-engineer team to architect a scalable Unity-based educational game serving 250+ students across 5+ schools.',
+      'Implemented multiplayer backend services in C#, enabling real-time concurrent gameplay and reducing latency by 15%.',
+      'Directed AWS deployment of a Node.js platform, reducing onboarding time by 40% and maintaining 99.9% uptime.',
+    ],
+  },
+  {
+    title: 'Technology Intern',
+    org: 'Werner Enterprises',
+    dates: 'May 2024 – Aug 2024',
+    loc: 'Omaha, NE',
+    points: [
+      'Redesigned a core module in C# and .NET, reducing code complexity and weekly debug time by 3+ hours.',
+      'Resolved 15+ high-priority bugs, preventing production incidents.',
+      'Improved SQL pipelines used by 3 internal teams, boosting report generation speed by 25% and accuracy by 20%.',
+    ],
+  },
+  {
+    title: 'Software Engineer Intern',
+    org: 'Helikar Lab — UNL',
+    dates: 'Oct 2022 – May 2023',
+    loc: 'Lincoln, NE',
+    points: [
+      'Implemented modules for the Cell Collective using React and Node.js, enabling real-time simulation for 250+ models.',
+      'Integrated logic-based model support, reducing load time by 40%.',
+      'Automated 100+ test cases with Cypress and Docker.',
+    ],
+  },
+  {
+    title: 'Data Analyst Intern',
+    org: 'SelectQuote',
+    dates: 'May 2022 – Aug 2022',
+    loc: 'Overland Park, KS',
+    points: [
+      'Analyzed 100k+ rows of sales and call data using SQL and Power BI.',
+      'Identified low-performing campaigns via cohort analysis, improving call efficiency by 15%.',
+      'Built Python scripts and used Postman to validate API-driven data pipelines, reducing manual checks by 30%.',
+    ],
+  },
+  {
+    title: 'Software Engineer Associate (Raikes Design Studio)',
+    org: 'Kiewit',
+    dates: 'Aug 2021 – May 2022',
+    loc: 'Lincoln, NE',
+    points: [
+      'Deployed a custom CNN using Python, PyTorch, GDAL, and Azure Blob on drone imagery for solar panel detection.',
+      'Developed a React/.NET app to integrate the model, boosting detection accuracy by 10%.',
+      'Created REST APIs and automated image workflows, saving 15+ weekly hours.',
+    ],
+  },
+  {
+    title: 'Undergraduate Research Assistant',
+    org: 'School of Computing — UNL',
+    dates: 'Aug 2020 – May 2021',
+    loc: 'Lincoln, NE',
+    points: [
+      'Conducted geospatial analysis on 25k+ social unrest events using QGIS and Python across all 28 Indian states.',
+    ],
+  },
+  {
+    title: 'Learning Assistant',
+    org: 'School of Computing — UNL',
+    dates: 'Aug 2020 – May 2022',
+    loc: 'Lincoln, NE',
+    points: [
+      'LA for CSCE 423 (Algorithms) and CSCE 101 (Intro Python); graded 30+ assignments and assisted 25+ students per week.',
+    ],
+  },
+];
+
+const skills = {
+  Languages: ['Python', 'Java', 'JavaScript', 'TypeScript', 'C#', 'C++', 'SQL'],
+  'Frameworks & ML': ['React', 'Node.js', '.NET', 'Express.js', 'PyTorch', 'TensorFlow', 'Scikit-learn'],
+  'Cloud & Tools': ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Git', 'Jenkins', 'Postman', 'Swagger', 'MongoDB', 'Power BI', 'Tableau', 'Snowflake', 'Gradle', 'Linux CLI'],
+};
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Savan Patel — AI/software engineer building GenAI, RAG, and full-stack systems. M.S. Computer Science, University of Nebraska-Lincoln."
+    />
+    <title>Savan Patel — AI / Software Engineer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-nav">
+      <div class="container nav-inner">
+        <span class="nav-name">savan.patel</span>
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="about" aria-labelledby="hero-heading">
+        <!-- Subtle knowledge-graph motif: nodes and edges, a nod to semantic search / RAG work -->
+        <svg class="hero-graph" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true" role="presentation">
+          <g stroke="var(--node)" stroke-width="1" fill="none" opacity="0.7">
+            <line x1="640" y1="60" x2="760" y2="130" />
+            <line x1="760" y1="130" x2="700" y2="240" />
+            <line x1="700" y1="240" x2="830" y2="200" />
+            <line x1="760" y1="130" x2="830" y2="200" />
+            <line x1="640" y1="60" x2="700" y2="240" />
+            <line x1="830" y1="200" x2="860" y2="90" />
+            <line x1="760" y1="130" x2="860" y2="90" />
+            <line x1="700" y1="240" x2="620" y2="320" />
+          </g>
+          <g fill="var(--node)">
+            <circle cx="640" cy="60" r="4" />
+            <circle cx="760" cy="130" r="6" />
+            <circle cx="700" cy="240" r="5" />
+            <circle cx="830" cy="200" r="4" />
+            <circle cx="860" cy="90" r="3" />
+            <circle cx="620" cy="320" r="3" />
+          </g>
+        </svg>
+        <div class="container hero-content">
+          <h1 id="hero-heading">Savan Patel</h1>
+          <p class="tagline">
+            AI / software engineer working on GenAI and retrieval systems — RAG pipelines, LLM
+            fine-tuning, and full-stack products. Currently a Software Engineer at the University of
+            Nebraska-Lincoln, where I completed my M.S. in Computer Science (May 2025).
+          </p>
+          <p class="meta">Lincoln, NE · M.S. CS '25 · B.S. CS (Honors) '23, Minor in Math &amp; Statistics</p>
+          <div class="hero-links">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="https://github.com/Ssavan99">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/ssavan971">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <h2 id="experience-heading"><span class="h-index" aria-hidden="true">01.</span>Experience</h2>
+          {jobs.map((job) => (
+            <article class="job">
+              <div class="job-head">
+                <h3>{job.title} · <span class="org">{job.org}</span></h3>
+                <span class="dates">{job.dates}</span>
+              </div>
+              <p class="loc">{job.loc}</p>
+              <ul>
+                {job.points.map((p) => <li>{p}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+          <h2 id="projects-heading"><span class="h-index" aria-hidden="true">02.</span>Projects</h2>
+          <div class="project-grid">
+            <article class="project-card featured">
+              <span class="featured-badge">Featured</span>
+              <h3>Nexus OS</h3>
+              <p>
+                A personal operating layer built around a private Markdown/Obsidian knowledge
+                "brain," with GBrain as the underlying local memory, search, and MCP engine
+                (Postgres + pgvector, local Ollama embeddings). Multiple AI agents — Codex, Claude
+                Code, claude.ai, and ChatGPT — connect to the same shared brain over MCP, with
+                read-only access enforced server-side for cloud surfaces. Nexus OS itself holds the
+                schemas, workflows, prompts, and service glue (launchd auto-sync, OAuth-scoped HTTP
+                connector) that make one brain usable by many agents.
+              </p>
+              <ul class="project-tags">
+                <li>MCP</li><li>RAG</li><li>pgvector</li><li>Ollama</li><li>OAuth 2.1</li><li>Obsidian</li>
+              </ul>
+            </article>
+            {projects.map((p) => (
+              <article class="project-card">
+                <h3>{p.name}</h3>
+                <p>{p.desc}</p>
+                <ul class="project-tags">
+                  {p.tags.map((t) => <li>{t}</li>)}
+                </ul>
+                {p.repo && (
+                  <a class="repo-link" href={`https://github.com/Ssavan99/${p.repo}`}>
+                    github.com/Ssavan99/{p.repo}
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <h2 id="skills-heading"><span class="h-index" aria-hidden="true">03.</span>Skills</h2>
+          <div class="skills-groups">
+            {Object.entries(skills).map(([group, items]) => (
+              <div>
+                <h3>{group}</h3>
+                <ul class="skill-list">
+                  {items.map((s) => <li>{s}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="education" aria-labelledby="education-heading">
+        <div class="container">
+          <h2 id="education-heading"><span class="h-index" aria-hidden="true">04.</span>Education &amp; Involvement</h2>
+          <div class="edu-item">
+            <h3>M.S. Computer Science — University of Nebraska-Lincoln</h3>
+            <p>May 2025</p>
+          </div>
+          <div class="edu-item">
+            <h3>B.S. Computer Science (Honors), Minor in Math &amp; Statistics — University of Nebraska-Lincoln</h3>
+            <p>May 2023</p>
+          </div>
+          <div class="edu-item">
+            <h3>Design &amp; IT Chair — Indian Student Association (ISA)</h3>
+            <p>Led IT and design initiatives, web updates, and digital assets for events.</p>
+          </div>
+          <div class="edu-item">
+            <h3>Treasurer — Initialize</h3>
+            <p>Managed a $10,000+ budget and coordinated funding logistics for 10+ events.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <h2 id="contact-heading"><span class="h-index" aria-hidden="true">05.</span>Contact</h2>
+          <ul class="contact-list">
+            <li><span class="label">email</span><a href="mailto:ssavan971@gmail.com">ssavan971@gmail.com</a></li>
+            <li><span class="label">phone</span><a href="tel:+15167104082">(516) 710-4082</a></li>
+            <li><span class="label">github</span><a href="https://github.com/Ssavan99">github.com/Ssavan99</a></li>
+            <li><span class="label">linkedin</span><a href="https://www.linkedin.com/in/ssavan971">linkedin.com/in/ssavan971</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Savan Patel · Built with Astro, hand-rolled CSS, and no trackers.</p>
+      </div>
+    </footer>
+  </body>
+</html>
